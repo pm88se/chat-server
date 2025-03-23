@@ -21,7 +21,8 @@
     "migration:create": "cross-var ts-node node_modules/typeorm/cli.js migration:create ./src/database/migrations/$npm_config_name",
     "migration:up": "ts-node node_modules/typeorm/cli.js migration:run -d src/shared/utils/data-source.ts",
     "migration:down": "ts-node node_modules/typeorm/cli.js migration:revert -d src/shared/utils/data-source.ts",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commit": "cz"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
@@ -52,7 +53,9 @@
     "@types/lodash": "^4.17.16",
     "@types/node": "^22.10.7",
     "@types/supertest": "^6.0.2",
+    "commitizen": "^4.3.1",
     "cross-var": "^1.1.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.2",
@@ -92,5 +95,10 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
