@@ -32,7 +32,7 @@ export default tseslint.config(
       '@typescript-eslint/no-unsafe-argument': 'warn',
       'no-mixed-spaces-and-tabs': 'error',
       'no-tabs': 'error',
-      'semi': ['error', 'always'],
+      semi: ['error', 'always'],
     },
   },
   {
