@@ -13,6 +13,6 @@ async function bootstrap() {
     origin: 'http://localhost:3000', // React dev server
     credentials: true,
   });
-  await app.listen(process.env.PORT ?? 5000);
+  await app.listen(parseInt(process.env.PORT ?? '5000', 10), '0.0.0.0');
 }
 void bootstrap();
